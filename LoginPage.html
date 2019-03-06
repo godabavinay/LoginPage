@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Login Page</title>
+        <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+        <linK rel="stylesheet" href="loginPageStylesheet.css" />
+    </head>
+    <body>
+        <!-- Login Page form -->
+        <div id="login_div">
+            <h3>Login</h3>
+            <input type="email" placeholder="Email" id="email_field">
+            <input type="password" placeholder="Password" id="password_field">
+            <button onclick="login()">Login to Account</button>
+        </div>
+
+        <!-- After Login Page -->
+        <div id="loggedin_div">
+            <p id="user_details">Welcome to Firebase web login example. You're currently logged in</p>
+            <button onclick="logout()">Logout</button>
+        </div>
+        
+        <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+        <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCsMdDcAgqARUVg7uYB-ym6YwULoFF8D0I",
+            authDomain: "testingauth-4f411.firebaseapp.com",
+            databaseURL: "https://testingauth-4f411.firebaseio.com",
+            projectId: "testingauth-4f411",
+            storageBucket: "testingauth-4f411.appspot.com",
+            messagingSenderId: "895658856848"
+        };
+        firebase.initializeApp(config);
+        </script>
+        <script src="loginPageScript.js">
+            // Login Page script
+        </script>
+    </body>
+</html>
